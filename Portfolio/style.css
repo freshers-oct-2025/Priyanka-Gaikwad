@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section-hero {
+  min-width: 1200px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+li {
+  list-style-type: none;
+}
+nav {
+  padding: 30px;
+  height: 75px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: end;
+}
+
+.nav-list {
+  display: flex;
+  gap: 40px;
+  justify-content: end;
+}
+
+.hero-img {
+  background-image: url(images/portfolio1.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  min-height: 100vh;
+}
+.hero-content {
+  padding-top: 160px;
+}
+
+.div1 {
+  font-size: 65px;
+  color: black;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-bottom: 1px;
+}
+.div2 {
+  font-size: 35px;
+  justify-content: center;
+  display: flex;
+  color: whitesmoke;
+  margin-bottom: 30px;
+}
+.div3 {
+  font-size: 45px;
+  color: whitesmoke;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.a1 {
+  text-decoration: none;
+  padding: 25px 25px;
+  text-align: center;
+  color: white;
+}
+
+.div5 {
+  font-size: 30px;
+  color: white;
+  justify-content: center;
+  display: inline-block;
+
+  margin-bottom: 3%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.div6 {
+  font-size: 22px;
+  color: white;
+  justify-content: center;
+  display: flex;
+  margin-left: 1%;
+}
+#about {
+  background-color: #7b5e32;
+}
+#home,
+#about,
+#education {
+  min-height: 100vh;
+  padding: 30px;
+}
+
+#education {
+  padding: 30px;
+  text-align: center;
+}
+
+#education h2 {
+  background-color: #7b5e32;
+  margin-bottom: 20px;
+  color: white;
+}
+
+#education table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+#education th,
+#education td {
+  border: 1px solid #444;
+  padding: 10px;
+  text-align: center;
+}
+
+#education th {
+  background-color: #7b5e32;
+  color: #fff;
+}
+
+#education tr:hover {
+  background-color: #333;
+}
