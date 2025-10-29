@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 80%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  place-items: center;
+  color: white;
+}
+.inputField {
+  width: 400px;
+  margin: 20px;
+  padding: 15px;
+  font-size: 20px;
+  background-color: beige;
+  color: black;
+  border-radius: 15px;
+}
+#submitBtn {
+  font-size: 18px;
+  padding: 15px;
+  margin: 20px;
+  border: none;
+  border-radius: 50px;
+  background-color: lightpink;
+  color: black;
+  width: 200px;
+}
+p {
+  color: white;
+  font-size: 20px;
+}
+.heading {
+  margin: 50px;
+}
+.msg2Style {
+  border: 2px solid lightpink;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 30px;
+}
