@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 80%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  place-items: center;
+  color: white;
+}
+#clickBtn {
+  font-size: 18px;
+  padding: 15px;
+  margin: 20px;
+  border: none;
+  border-radius: 50px;
+  background-color: lightpink;
+  color: black;
+  width: 200px;
+}
+#startCount {
+  font-size: 40px;
+  margin: 40px;
+}
+#msg {
+  font-size: 25px;
+  color: red;
+}
