@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2 class="heading">Enter the number between 1 to 10</h2>
+    <input type="text" class="inputField ">
+    <button type="submit" id="submitBtn">Submit</button>
+    <p  id="msg"></p>
+    <p id="msg2"></p>
+
+    <script>
+       let inputField = document.querySelector(".inputField");
+       let submitBtn = document.getElementById("submitBtn");
+       let mathRandom;
+
+       submitBtn.addEventListener("click", ()=>{
+       
+        mathRandom = Math.floor(Math.random() * 10 + 1);
+        document.getElementById("msg").innerText = `The number is : ${mathRandom}, You entered :${Number(inputField.value)}`;
+      
+        
+      
+        if(mathRandom === Number(inputField.value)){
+              document.getElementById("msg2").inneText = `Congratulations!! The number is correct`;
+        }else{
+            document.getElementById("msg2").innerText = `Sorry, Your guess is incorrect`;
+        }
+        document.getElementById("msg").classList.add("msg2Style");
+
+       });
+    </script>
+
+</body>
+</html>
