@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="mainDiv">
+      <div class="firstDiv">
+        <p id="pElem">0</p>
+      </div>
+      <div class="btns">
+        <button id="startBtn">Start</button>
+        <button id="stopBtn">Stop</button>
+        <button id="resetBtn">Reset</button>
+        <button id="cleanBtn">clean</button>
+        <button id="getTimeBtn">getTime</button>
+      </div>
+      <div class="text"></div>
+    </div>
+
+    <script>
+      let newText = document.querySelector(".text");
+      let start = 0;
+      let setIntervalAcc;
+      const startFunct = () => {
+        setIntervalAcc = setInterval(() => {
+          document.getElementById("pElem").innerText = start++;
+        }, 1000);
+      };
+      const stopFunct = () => {
+        clearInterval(setIntervalAcc);
+      };
+
+      const resetFunct = () => {
+        start = 0;
+        document.getElementById("pElem").innerText = start;
+        clearInterval(setIntervalAcc);
+      };
+      const getTimeFunct = () => {
+        let newPara = document.createElement("p");
+        //  console.log(newPara);
+        if (start > 0) {
+          newPara.innerText = `The stop time is: ${start - 1}`;
+        } else {
+          newPara.innerText = `The stop time is :${start}`;
+        }
+
+        newText.append(newPara);
+      };
+
+      const cleanFunct = () => {
+        newText.innerHTML = "";
+      };
+      document.getElementById("startBtn").addEventListener("click", startFunct);
+      document.getElementById("stopBtn").addEventListener("click", stopFunct);
+      document.getElementById("resetBtn").addEventListener("click", resetFunct);
+      document.getElementById("cleanBtn").addEventListener("click", cleanFunct);
+      document
+        .getElementById("getTimeBtn")
+        .addEventListener("click", getTimeFunct);
+    </script>
+  </body>
+</html>

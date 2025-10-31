@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  color: white;
+}
+body {
+  height: 50%;
+  display: grid;
+  place-items: center;
+  background-color: black;
+}
+.mainDiv {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  flex-direction: column;
+  border: 1px solid yellow;
+  padding: 20px;
+}
+.firstDiv p {
+  font-size: 40px;
+  color: palevioletred;
+  margin: 20px;
+}
+.btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+button {
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+}
