@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    table {
+      /* border: 1px solid black; */
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th,
+    tr {
+      border: 1px solid black;
+      text-align: left;
+      padding: 8px;
+    }
+  </style>
+  <body>
+    <h1>Fetching Data</h1>
+    <div class="hero-btn">
+      <button id="hero-img-btn">Load Images</button>
+      <button id="hero-customer-btn">Load Customer</button>
+    </div>
+    <section class="main-api-body">
+      <table class="api-body">
+        <tr>
+          <th id="name">Name</th>
+          <th id="email">Email</th>
+          <th id="phone">Phone</th>
+        </tr>
+      </table>
+    </section>
+  </body>
+
+  <script>
+    let apiBody = document.querySelector(".api-body");
+    let apiUrl = "https://playground.mockoon.com/customers";
+    let customerBtn = document.getElementById("hero-customer-btn");
+
+    let fetchData = () => {
+      fetch(apiUrl, {
+        headers: {
+          Accept: "application / json",
+        },
+      })
+        .then((res) => {
+          // console.log(res);
+          return res.json();
+        })
+        .then((data) => {
+          // console.log(data[0].name);
+          // console.log(data[0].email);
+          // console.log(data[0].phone);
+          // console.log(data);
+
+          // let arr = data;
+          // console.log(arr);
+          for (let i = 0; i <= 20; i++) {
+            let newTrName = document.createElement("tr");
+            newTrName.innerHTML = data[i].name;
+            document.getElementById("name").append(newTrName);
+
+            let newTrEmail = document.createElement("tr");
+            newTrEmail.innerHTML = data[i].email;
+            document.getElementById("email").append(newTrEmail);
+
+            let newTrPhone = document.createElement("tr");
+            newTrPhone.innerHTML = data[i].phone;
+            document.getElementById("phone").append(newTrPhone);
+          }
+
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    };
+
+    customerBtn.addEventListener("click", fetchData);
+  </script>
+</html>
